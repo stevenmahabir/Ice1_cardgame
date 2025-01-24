@@ -30,7 +30,8 @@ public class CardTrick {
             c.setSuit(Card.SUITS[random.nextInt(4)]);
             magicHand[i] = c;
         }
-
+        
+        /*
         //insert code to ask the user for Card value and suit, create their card
         Scanner scanner = new Scanner(System.in);
         Card[] playerCards = new Card[7];
@@ -58,18 +59,31 @@ public class CardTrick {
                     break;
                 }
             }
-
-            //Then report the result here
-            if (found) {
-                System.out.println("Your card " + playerCard.getValue() + " of " + playerCard.getSuit() + " is in the magic hand!");
-            } else {
-                System.out.println("Sorry! Your card " + playerCard.getValue() + " of " + playerCard.getSuit() + "is NOT in the magic hand!");
-            }
-
+            */
+            
             // add one luckcard hard code 2,clubs
             Card luckyCard = new Card();
             luckyCard.setValue(2);
             luckyCard.setSuit("Clubs");
+            
+            //Check if lucky card is in the magic hand
+            for (int i = 0; i < 7; i++){
+            boolean found = false; //to set the initial to false before searching magic hand
+            for (Card card : magicHand) {
+                //if magic card is equal to the players card it will result in found = true
+                if (card.getValue() == luckyCard.getValue() && card.getSuit().equals(luckyCard.getSuit())) {
+                    found = true;
+                    break;
+                }
+            }
+            
+            //Then report the result here
+            if (found) {
+                System.out.println("Your card " + luckyCard.getValue() + " of " + luckyCard.getSuit() + " is in the magic hand!");
+            } else {
+                System.out.println("Sorry! Your card " + luckyCard.getValue() + " of " + luckyCard.getSuit() + " is NOT in the magic hand!");
+            }
+
         }
     }
 }
