@@ -14,7 +14,8 @@ import java.util.Scanner;
  *
  * @author Steven Mahabir
  * @studentNumber 991490605
- * 
+ *
+ ***
  */
 public class CardTrick {
 
