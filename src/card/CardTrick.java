@@ -13,7 +13,7 @@ import java.util.Scanner;
  * the user's card. To be used as starting code in ICE 1
  *
  * @author Steven Mahabir
- * @student
+ * @studentNumber 991490605
  */
 public class CardTrick {
 
